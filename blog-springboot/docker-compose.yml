@@ -1,0 +1,35 @@
+version: "3"
+
+services:
+  blog-backend:
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    container_name: blog-backend
+    ports:
+      - "8080:8080"
+    depends_on:
+      - mysql
+      - rabbitmq
+      - redis
+
+  mysql:
+    image: mysql:latest
+    ports:
+      - "3306:3306"
+    container_name: blog-mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+
+  redis:
+    image: redis:6.0.5
+    ports:
+      - "6379:6379"
+    container_name: blog-redis
+
+  rabbitmq:
+    image: rabbitmq:management
+    ports:
+      - "15672:15672"
+      - "5672:5672"
+    container_name: blog-rabbitmq
