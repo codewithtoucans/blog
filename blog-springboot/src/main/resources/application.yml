@@ -106,6 +106,6 @@ weibo:
   app-id: xxx
   app-secret: xxx
   grant-type: authorization_code
-  redirect-url: http://www.codegzy.top/oauth/login/weibo
+  redirect-url: http://xxx/oauth/login/weibo
   access-token-url: https://api.weibo.com/oauth2/access_token
   user-info-url: https://api.weibo.com/2/users/show.json?uid={uid}&access_token={access_token}
