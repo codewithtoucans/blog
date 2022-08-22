@@ -10,9 +10,9 @@ spring:
   datasource:
     type: com.zaxxer.hikari.HikariDataSource
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://120.55.57.49:3306/blog?serverTimezone=UTC&useUnicode=true&characterEncoding=utf8&useSSL=false&allowPublicKeyRetrieval=true
-    username: root
-    password: root
+    url: xxx
+    username: xxx
+    password: xxx
     hikari:
       minimum-idle: 5
       # 空闲连接存活最大时间，默认600000（10分钟）
@@ -30,10 +30,10 @@ spring:
       connection-test-query: SELECT 1
   # redis配置
   redis:
-    host: 120.55.57.49
+    host: xxx
     port: 6379
   rabbitmq:
-    host: 120.55.57.49
+    host: xxx
     port: 5672
     username: guest
     password: guest
@@ -46,12 +46,12 @@ spring:
   # es配置 若搜索模式为mysql可删除
   elasticsearch:
     rest:
-      uris: 120.55.57.49:9200
+      uris: xxx:9200
   # 邮箱配置
   mail:
     host: smtp.qq.com
-    username: gprogrammer@qq.com
-    password: mmigwyhhktflcidi
+    username: xxx
+    password: xxx
     default-encoding: UTF-8
     port: 587
     properties:
@@ -82,15 +82,15 @@ upload:
   mode: oss
   local:
 #     nginx映射本地文件路径，无域名则为 ip:83
-    url: http://120.55.57.49:83/
+    url: xxx
     # 本地文件存储路径
     path: /usr/local/upload/
   oss:
-    url: http://gzy-person-data.oss-cn-hangzhou.aliyuncs.com/
-    endpoint: oss-cn-hangzhou.aliyuncs.com
-    accessKeyId: LTAI5tFXD2DrviPscoH5BD3W
-    accessKeySecret: KyoT41zUzFmYTP8JFbkOd1OhKb89KE
-    bucketName: gzy-person-data
+    url: xxx
+    endpoint: xxx
+    accessKeyId: xxx
+    accessKeySecret: xxx
+    bucketName: xxx
 
 # 网站前台域名（邮件通知用）
 website:
@@ -103,8 +103,8 @@ website:
 #  user-info-url: https://graph.qq.com/user/get_user_info?openid={openid}&access_token={access_token}&oauth_consumer_key={oauth_consumer_key}
 #
 weibo:
-  app-id: 202044291
-  app-secret: 531d43ba10d9f859c35acd18d97bcc3b
+  app-id: xxx
+  app-secret: xxx
   grant-type: authorization_code
   redirect-url: http://www.codegzy.top/oauth/login/weibo
   access-token-url: https://api.weibo.com/oauth2/access_token
